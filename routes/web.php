@@ -10,13 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('threads', 'ThreadsController');
 
-Route::prefix('threads')->group(function() {
-    Route::post('/{thread}/replies', 'RepliesController@store')->middleware('auth');
-    Route::get('/{thread}', 'ThreadsController@show');
-    Route::get('/', 'ThreadsController@index')->name('threads-list');
-    Route::post('/', 'ThreadsController@store')->middleware('auth');
-});
+Route::post('threads/{thread}/replies', 'RepliesController@store')->middleware('auth');
 
 Auth::routes();
 

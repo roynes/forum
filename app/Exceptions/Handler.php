@@ -46,10 +46,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        // From jeffrey way's laracast
-        // ep 4 of let's build a forum with laravel
-        if(app()->environment() === 'testing') throw $exception;
-
         return parent::render($request, $exception);
     }
 }

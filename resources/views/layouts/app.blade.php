@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a href="{{ route('threads-list') }}" class="nav-link"> All Threads </a>
+                        <a href="{{ route('threads.index') }}" class="nav-link"> All Threads </a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
